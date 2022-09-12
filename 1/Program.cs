@@ -6,4 +6,10 @@ int numA = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите число B ");
 int numB = int.Parse(Console.ReadLine()!);
 
-Console.WriteLine($"{numA} в стеени {numB} равно: {Math.Pow(numA, numB)}");
+
+void writeAB(int a, int b)
+{
+Console.WriteLine($"{a} в стеени {b} равно: {Math.Pow(a, b)}");
+}
+
+writeAB(numA, numB);
