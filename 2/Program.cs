@@ -1,16 +1,26 @@
 ﻿//  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
 
-
 Console.WriteLine("Введите цело число ");
 int input = int.Parse(Console.ReadLine()!);
 
-int sumNum = 0;
-Console.Write($"Сумма цифр числа {input} ");
-while (input > 0)
+
+int sumCount(int a)
 {
-    sumNum += input % 10;
-    input = input / 10;
+    int sumNum = 0;
+    while (a > 0)
+    {
+        sumNum += a % 10;
+        a = a / 10;
+    }
+    return sumNum;
 }
 
-Console.Write($"равна: {sumNum}");
+void writeSum(int a, int b)
+{
+    Console.WriteLine($"Сумма цифр числа {a} равна: {b}");
+}
+
+
+int result = sumCount(input);
+writeSum(input, result);
